@@ -1,0 +1,2 @@
+import React,{useEffect,useState}from 'react'; import {api} from '../api';
+export default function Projects(){const[items,setItems]=useState([]);useEffect(()=>{api.get('/projects').then(res=>setItems(res.data))},[]);return(<div><h2>Projects</h2><ul>{items.map(p=>(<li key={p._id}><b>{p.title}</b> – {p.description}</li>))}</ul></div>)}
