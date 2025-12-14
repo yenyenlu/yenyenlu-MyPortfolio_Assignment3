@@ -1,2 +1,0 @@
-import React,{useEffect,useState}from 'react'; import {api} from '../api';
-export default function Education(){const[items,setItems]=useState([]);useEffect(()=>{api.get('/educations').then(res=>setItems(res.data))},[]);return(<div><h2>Education</h2><ul>{items.map(e=>(<li key={e._id}><b>{e.school}</b> – {e.program} ({e.level})</li>))}</ul></div>)}

@@ -1,0 +1,16 @@
+{
+  "name": "myportfolio-assignment4",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "client",
+    "netlify/functions"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace client",
+    "dev": "netlify dev"
+  },
+  "devDependencies": {
+    "netlify-cli": "^23.12.3"
+  }
+}
